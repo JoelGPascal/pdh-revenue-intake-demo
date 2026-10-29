@@ -43,6 +43,6 @@ example.org:demo-001 HUMAN_REVIEW_REQUIRED False
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-The eight source-defined cases cover fail-closed defaults, unverified financial fields, sold/pending status, invalid prices, HTTPS requirement, missing IDs, timezone requirement and source-key deduplication. The repository reports eight passing local tests on 2026-10-14; this documentation update did not rerun them.
+The eight source-defined cases cover fail-closed defaults, unverified financial fields, sold/pending status, invalid prices, HTTPS requirement, missing IDs, timezone requirement and source-key deduplication. The repository reports eight passing local tests on 2026-10-14; independent offline reproduction on 2026-10-29 also reported 8 tests, OK.
 
 **Not implemented:** rights-to-market verification, source authenticity checks, CRM mutations, outreach consent, live feed, scraping, automated publication or revenue calculations.
