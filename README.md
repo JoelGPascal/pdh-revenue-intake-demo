@@ -54,3 +54,10 @@ Potential CRM intake (NOT implemented here)
 - [Notion — Enterprise GTM, AI & Multi-Agent Revenue Systems](https://twisty-ethernet-39b.notion.site/Joel-Pascal-Enterprise-GTM-AI-Multi-Agent-Revenue-Systems-b8c350de9f0d83678678018727dd0d54)
 
 **Visibility:** this source repository is public; no license for redistribution is granted in this release.
+
+## Engineering review package (2026-10-29)
+
+- [Architecture, provenance and trust boundaries](docs/architecture.md)
+- [Runnable synthetic input/output demonstration](docs/synthetic-demo.md)
+
+The demonstration is provided for independent local execution; this update did not run the suite or deploy an integration.
