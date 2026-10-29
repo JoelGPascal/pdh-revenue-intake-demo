@@ -32,7 +32,7 @@ Python 3.10+, no third-party packages:
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-See [synthetic example](synthetic-demo.md) for a runnable local example and expected fields. Current source defines eight `test_*` methods; the README's eight-pass result is historical (2026-10-14), not rerun during this documentation update.
+See [synthetic example](synthetic-demo.md) for a runnable local example and expected fields. Current source defines eight `test_*` methods; the README's eight-pass result is historical (2026-10-14), independently reproduced offline on 2026-10-29: 8 tests, OK.
 
 ## Failure/limitation policy
 
