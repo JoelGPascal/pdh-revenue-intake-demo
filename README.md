@@ -61,3 +61,5 @@ Potential CRM intake (NOT implemented here)
 - [Runnable synthetic input/output demonstration](docs/synthetic-demo.md)
 
 The demonstration is provided for independent local execution; this update did not run the suite or deploy an integration.
+
+- [Security and operational readiness checkpoint (2026-10-29)](docs/READINESS_2026-10-29.md)
