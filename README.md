@@ -28,7 +28,7 @@ Python 3.10+; no third-party dependencies.
 PYTHONPATH=src python -m unittest discover -s tests -v
 \`\`\`
 
-**Local check, 2026-10-14: 8 tests passed, 0 failures.** This test result covers the demonstration's pure functions, not production deployments or integrated APIs. GitHub CI and independent Codex review are not yet complete.
+**Local check, 2026-10-14: 8 tests passed, 0 failures. Independent offline reproduction, 2026-10-29: 8 tests passed, 0 failures.** This test result covers the demonstration's pure functions, not production deployments or integrated APIs. GitHub CI and independent Codex review are not yet complete.
 
 ## Architecture
 \`\`\`
