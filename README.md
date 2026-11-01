@@ -1,8 +1,18 @@
-# PDH Revenue Engine — Safe Listing Intake (Public Demo)
+# PDH Revenue Intake Demo
 
-A **public, synthetic-data-only engineering case study** showing how a real-estate revenue workflow should treat third-party listing data **before** a human validates its accuracy, commercial terms and distribution permissions.
+A Python prototype that turns third-party property listing inputs into structured records for human review.
 
-This is a portfolio demonstration associated with the **Pascal Dominion Holdings** AI/revenue-systems initiative. It is **not** a live deal feed, deployed CRM integration, production outbound campaign or evidence of transaction revenue.
+## Project summary
+
+**Problem:** Inconsistent listing data makes it difficult to distinguish a sourced lead from a verified commercial opportunity.
+
+**My contribution:** I defined normalization, source tracking and review requirements from PDH operating needs and developed the prototype with AI coding assistance.
+
+**Demonstrated result:** Synthetic records are normalized, duplicate source IDs are collapsed and uncertain fields receive review flags. Eight offline tests were reproduced on October 29, 2026.
+
+**Start here:** [Runnable example](docs/synthetic-demo.md) · [Architecture](docs/architecture.md) · [Commercial context](docs/COMMERCIAL_CONTEXT.md)
+
+This is a synthetic-data demonstration. Live CRM integration and outreach are outside its implemented scope.
 
 ## Problem
 An external property marketplace may provide price, ARV estimates, availability labels and IDs, but none of those alone prove:
@@ -16,7 +26,7 @@ Blindly passing scraped fields to a CRM, public website or outbound tool can cau
 ## What is implemented
 - Pure Python normalization of a third-party source record, with a stable source identity key.
 - UTC observation timestamps, explicit *unverified* price/ARV fields, source-status labelling.
-- **Fail-closed controls:** \`distribution_authorized=False\`, \`publishable=False\`, \`automated_marketing_eligible=False\`, \`HUMAN_REVIEW_REQUIRED\`.
+- **Fail-closed controls:** `distribution_authorized=False`, `publishable=False`, `automated_marketing_eligible=False`, `HUMAN_REVIEW_REQUIRED`.
 - Sold/pending/unknown statuses, missing price/address and unverified ARV receive review flags.
 - Duplicate source-listing keys collapse without ever merging or editing CRM buyer contacts.
 - Synthetic-data unit tests, with no external network access or real customer data.
@@ -24,14 +34,14 @@ Blindly passing scraped fields to a CRM, public website or outbound tool can cau
 ## Run tests
 Python 3.10+; no third-party dependencies.
 
-\`\`\`bash
+```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
-\`\`\`
+```
 
 **Local check, 2026-10-14: 8 tests passed, 0 failures. Independent offline reproduction, 2026-10-29: 8 tests passed, 0 failures.** This test result covers the demonstration's pure functions, not production deployments or integrated APIs. GitHub CI and independent Codex review are not yet complete.
 
 ## Architecture
-\`\`\`
+```
 Third-party listing sample
     ↓ normalize and tag unverified fields
     ↓ source-ID-only deduplication
@@ -39,7 +49,7 @@ Human review queue (not a deal)
     ↓ verify facts, rights, contact permissions, underwriting
     ↓ separate explicit human approval and production safeguards
 Potential CRM intake (NOT implemented here)
-\`\`\`
+```
 
 **This repository cannot send, publish, or update anything.** The operational PDH CRM, buyer database, contracts, credentials, API tokens and live integration code are deliberately excluded.
 
