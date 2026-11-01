@@ -61,7 +61,7 @@ Potential CRM intake (NOT implemented here)
 
 ## Related proof
 - [Public CRM Association Verifier](https://github.com/JoelGPascal/crm-association-verifier) — distinct read-only record-relation verification project.
-- [Notion — Enterprise GTM, AI & Multi-Agent Revenue Systems](https://twisty-ethernet-39b.notion.site/Joel-Pascal-Enterprise-GTM-AI-Multi-Agent-Revenue-Systems-b8c350de9f0d83678678018727dd0d54)
+- [Current recruiter-facing portfolio — Enterprise Sales, GTM & Practical AI](https://app.notion.com/p/40b5622002f981709ab3e773187085f3)
 
 **Visibility:** this source repository is public; no license for redistribution is granted in this release.
 
