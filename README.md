@@ -1,5 +1,7 @@
 # PDH Revenue Intake Demo
 
+[![tests](https://github.com/JoelGPascal/pdh-revenue-intake-demo/actions/workflows/tests.yml/badge.svg)](https://github.com/JoelGPascal/pdh-revenue-intake-demo/actions/workflows/tests.yml)
+
 A Python prototype that turns third-party property listing inputs into structured records for human review.
 
 ## Project summary
@@ -38,7 +40,7 @@ Python 3.10+; no third-party dependencies.
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-**Local check, 2026-10-14: 8 tests passed, 0 failures. Independent offline reproduction, 2026-10-29: 8 tests passed, 0 failures.** This test result covers the demonstration's pure functions, not production deployments or integrated APIs. GitHub CI and independent Codex review are not yet complete.
+**Local check, 2026-10-14: 8 tests passed, 0 failures. Independent offline reproduction, 2026-10-29: 8 tests passed, 0 failures.** This test result covers the demonstration's pure functions, not production deployments or integrated APIs. Tests now also run automatically on every push via GitHub Actions (see the badge above).
 
 ## Architecture
 ```
@@ -61,7 +63,7 @@ Potential CRM intake (NOT implemented here)
 
 ## Related proof
 - [Public CRM Association Verifier](https://github.com/JoelGPascal/crm-association-verifier) — distinct read-only record-relation verification project.
-- [Current recruiter-facing portfolio — Enterprise Sales, GTM & Practical AI](https://app.notion.com/p/40b5622002f981709ab3e773187085f3)
+- [Current recruiter-facing portfolio — Enterprise Sales, GTM & Practical AI](https://false-ash-26c.notion.site/Joel-Pascal-portfolio-Enterprise-Sales-GTM-and-Practical-AI-40b5622002f981709ab3e773187085f3)
 
 **Visibility:** this source repository is public; no license for redistribution is granted in this release.
 
