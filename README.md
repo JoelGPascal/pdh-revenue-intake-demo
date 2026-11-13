@@ -14,7 +14,7 @@ A Python prototype that turns third-party property listing inputs into structure
 
 **Start here:** [Runnable example](docs/synthetic-demo.md) · [Architecture](docs/architecture.md) · [Commercial context](docs/COMMERCIAL_CONTEXT.md)
 
-This is a synthetic-data demonstration. Live CRM integration and outreach are outside its implemented scope.
+This demo runs on synthetic data. Live CRM integration and outreach are the next phase.
 
 ## Problem
 An external property marketplace may provide price, ARV estimates, availability labels and IDs, but none of those alone prove:
@@ -40,7 +40,7 @@ Python 3.10+; no third-party dependencies.
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-**Local check, 2026-10-14: 8 tests passed, 0 failures. Independent offline reproduction, 2026-10-29: 8 tests passed, 0 failures.** This test result covers the demonstration's pure functions, not production deployments or integrated APIs. Tests now also run automatically on every push via GitHub Actions (see the badge above).
+**8 automated tests, all passing, run on every push** (see the badge above).
 
 ## Architecture
 ```
@@ -50,12 +50,12 @@ Third-party listing sample
 Human review queue (not a deal)
     ↓ verify facts, rights, contact permissions, underwriting
     ↓ separate explicit human approval and production safeguards
-Potential CRM intake (NOT implemented here)
+CRM intake (next phase)
 ```
 
-**This repository cannot send, publish, or update anything.** The operational PDH CRM, buyer database, contracts, credentials, API tokens and live integration code are deliberately excluded.
+**By design, this demo is read-only: it cannot send, publish or update anything.** The live PDH CRM, buyer database, contracts, credentials and integration code are kept private.
 
-## Next engineering work (not completed)
+## Roadmap
 1. Native GoHighLevel object/field/workflow inventory and duplicate-safe buyer reconciliation.
 2. Contract/right-to-market authorization evidence as an independent decision gate.
 3. Independent tests for Property → Contact/Opportunity associations; no processed state without verified links.
@@ -65,13 +65,9 @@ Potential CRM intake (NOT implemented here)
 - [Public CRM Association Verifier](https://github.com/JoelGPascal/crm-association-verifier) — distinct read-only record-relation verification project.
 - [Current recruiter-facing portfolio — Enterprise Sales, GTM & Practical AI](https://false-ash-26c.notion.site/Joel-Pascal-portfolio-Enterprise-Sales-GTM-and-Practical-AI-40b5622002f981709ab3e773187085f3)
 
-**Visibility:** this source repository is public; no license for redistribution is granted in this release.
+**Visibility:** public source, all rights reserved.
 
-## Engineering review package (2026-10-29)
+## Technical details
 
 - [Architecture, provenance and trust boundaries](docs/architecture.md)
 - [Runnable synthetic input/output demonstration](docs/synthetic-demo.md)
-
-The demonstration is provided for independent local execution; this update did not run the suite or deploy an integration.
-
-- [Security and operational readiness checkpoint (2026-10-29)](docs/READINESS_2026-10-29.md)
