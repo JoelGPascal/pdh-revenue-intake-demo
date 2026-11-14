@@ -75,3 +75,9 @@ Potential CRM intake (NOT implemented here)
 The demonstration is provided for independent local execution; this update did not run the suite or deploy an integration.
 
 - [Security and operational readiness checkpoint (2026-10-29)](docs/READINESS_2026-10-29.md)
+
+## Role in the broader system — 14 November 2026
+
+This public repository demonstrates review-only intake, not the complete GHL business workflow or JARVIS assistant. Its generic normalizer is separate from the private InvestorLift-specific adapter; similarities do not prove deployed synchronization.
+
+Use [architecture](docs/architecture.md) for trust boundaries, [synthetic demo](docs/synthetic-demo.md) for inputs/outputs and [readiness](docs/READINESS_2026-10-29.md) for dated evidence. Current CRM deployment, source scraping, distribution rights and live data quality are outside this module and were not verified by this documentation update.
